@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Amod Mulay",
+      "authorEmail": "amod.mulay@gmail.com",
+      "authorUrl": "www.amodmulay.com"
+    }
+  }
+}

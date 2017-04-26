@@ -1,0 +1,45 @@
+{
+  "name": "paharekari",
+  "version": "0.0.0",
+  "description": "utility to check server status ",
+  "homepage": "",
+  "author": {
+    "name": "Amod Mulay",
+    "email": "amod.mulay@gmail.com",
+    "url": "www.amodmulay.com"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "coveralls": "^2.12.0",
+    "nsp": "^2.6.3",
+    "eslint": "^3.18.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^19.0.1",
+    "request":"^2.12.0",
+     "nodemailer":"^0.3.x"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "amodmulay/paharekari",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "Apache-2.0"
+}
