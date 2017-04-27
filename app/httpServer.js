@@ -17,25 +17,31 @@ server.listen(port, (err) => {
 }) */
 
 const express = require('express')
+const exphbs = require('express-handlebars')
+var path = require("path");
 const app = express()
 
-app.use((request, response, next) => {
-  request.chance = Math.random()
-  console.log('Chance middlewar call', request.chance);
-  next()
-})
+// #1 initialize handelbars engine
+app.engine('.hbs', exphbs({
+  defaultLayout: 'main',
+  extname: '.hbs',
+  layoutsDir: path.join(__dirname, '../views/layouts')
+}))
+
+app.set('view engine', '.hbs')
+app.set('views', path.join(__dirname, '../views'))
+//finish #1
 
 app.use((request, response, next) => {
-  console.log('Response logger call',request.headers)
+//  console.log('Response logger call',request.headers)
   next()
 })
-
-
-
+//home handler
 app.get('/', (request, response) => {
-  response.json({
-    chance: request.chance
+  response.render('home', {
+    name: 'welcome to paharekari'
   })
 })
+
 
 app.listen(3000)
