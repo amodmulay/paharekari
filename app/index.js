@@ -6,3 +6,5 @@ module.exports = {};
 console.log("Initiating paharekari")
 
 const server = require('./httpServer')
+const pinger = require('./pinger')
+pinger.start;
