@@ -1,3 +1,3 @@
 // Index.js
 
-require('./app/index');
+require('./app/app');

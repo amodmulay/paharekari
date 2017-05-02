@@ -1,7 +1,8 @@
 'use strict';
-const _ = require('lodash')
-const server = require('./httpServer')
-const Pinger = require('../lib/pinger')
+const _ = require('lodash');
+const server = require('./httpServer');
+const Pinger = require('../lib/pinger');
+const config = require('../config');
 
 //First line
 module.exports = {};
@@ -10,13 +11,10 @@ console.log("Initiating paharekari")
 
 //start website monitor
 var ping = new Pinger({
-  hostname: 'https://diagnostics-license.kpit.com',
-  port: 8443,
-  path: '/limas/services',
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded' //,
-      //'Content-Length': Buffer.byteLength(postData)
-  },
-  pingInterval: 10
+  hostname: config.hostname,
+  port: config.port,
+  path: config.path,
+  method: config.method,
+  headers: config.headers,
+  pingInterval: config.pingInterval
 });
