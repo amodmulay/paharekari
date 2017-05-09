@@ -1,8 +1,12 @@
 'use strict';
-const _ = require('lodash');
-const server = require('./httpServer');
-const Pinger = require('../lib/pinger');
-const config = require('../config');
+/*
+Entry point for starting paharekari
+*/
+
+var _ = require('lodash');
+var server = require('../lib/httpServer');
+var Pinger = require('../lib/pinger');
+var config = require('../config.json');
 
 //First line
 module.exports = {};

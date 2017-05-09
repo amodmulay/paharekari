@@ -1,13 +1,16 @@
-[{
+{
   "url": "https://google.com",
   "interval": "1",
   "email": "amod.mulay@kpit.com",
   "hostname": "diagnostics-license.kpit.com",
-  "port": 8443,
+  "port": "8443",
   "path": "/limas/services",
   "method": "GET",
   "headers": {
     "Content-Type": "application/x-www-form-urlencoded"
   },
-  "pingInterval": 10
-}]
+  "pingInterval": "1",
+  "from": "amod.mulay@kpit.com",
+  "to": "amod.mulay@kpit.com"
+
+}
